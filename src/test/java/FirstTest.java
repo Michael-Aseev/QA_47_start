@@ -3,7 +3,6 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.annotations.Test;
-
 import java.time.Duration;
 
 public class FirstTest {
@@ -13,6 +12,7 @@ public class FirstTest {
     @Test
     public void firstTest() {
         // System.out.println("=================");
+
         driver.get("https://ilcarro.web.app/search");
         driver.manage().window().maximize();
         driver.manage().timeouts().pageLoadTimeout(Duration.ofSeconds(10));
@@ -35,7 +35,6 @@ public class FirstTest {
         pause(2);
         WebElement inputLastName = driver.findElement(By.cssSelector("input[autocomplete='family-name']"));
         inputLastName.sendKeys("Dilan");
-
 
     }
 

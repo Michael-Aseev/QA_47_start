@@ -1,4 +1,6 @@
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.annotations.Test;
 
@@ -17,6 +19,49 @@ public class PhoneBookSelectors {
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
         //home Work
         FirstTest.pause(5);
+        WebElement btnAbout = driver.findElement(By.cssSelector("a[href='/about']"));
+        btnAbout.click();
+        System.out.println("=======");
+        System.out.println(btnAbout.getText());
+        FirstTest.pause(5);
+        WebElement btnLogin = driver.findElement(By.cssSelector("a[href='/login']"));
+        btnLogin.click();
+        WebElement inputEmail = driver.findElement(By.cssSelector("input[placeholder='Email']"));
+        inputEmail.sendKeys("studiesaseev@gmail.com");
+        FirstTest.pause(3);
+        WebElement inputPassword = driver.findElement(By.cssSelector("input[placeholder='Password']"));
+        inputPassword.sendKeys("Ecbdn300396$");
+        FirstTest.pause(3);
+//        WebElement butnRegistration = driver.findElement(By.cssSelector("button[name='registration']"));
+//        butnRegistration.click();
+//        FirstTest.pause(3);
+        WebElement butnLogin = driver.findElement(By.cssSelector("button[name='login']"));
+        butnLogin.click();
+        FirstTest.pause(3);
+        WebElement btnADD = driver.findElement(By.cssSelector("a[href='/add']"));
+        btnADD.click();
+        FirstTest.pause(3);
+        WebElement inputName = driver.findElement(By.cssSelector("input[placeholder='Name']"));
+        inputName.sendKeys("Michael");
+        FirstTest.pause(3);
+        WebElement inputLastName = driver.findElement(By.cssSelector("input[placeholder='Last Name']"));
+        inputLastName.sendKeys("Aseev");
+        FirstTest.pause(3);
+        WebElement inputPhone = driver.findElement(By.cssSelector("input[placeholder='Phone']"));
+        inputPhone.sendKeys("0537847775");
+        FirstTest.pause(3);
+        WebElement inputEmailADD = driver.findElement(By.cssSelector("input[placeholder='email']"));
+        inputEmailADD.sendKeys("mamon300397@gmail.com");
+        FirstTest.pause(3);
+        WebElement inputAddress = driver.findElement(By.cssSelector("input[placeholder='Address']"));
+        inputAddress.sendKeys("Petah Tikva");
+        FirstTest.pause(3);
+        WebElement inputDescription = driver.findElement(By.cssSelector("input[placeholder='description']"));
+        inputDescription.sendKeys("qwrrt");
+        FirstTest.pause(3);
+//        WebElement butnSave = driver.findElement(By.cssSelector("button['Save']"));
+//        butnSave.click();
+
 
     }
 }
