@@ -120,7 +120,15 @@ public class phoneBookILCarroXPath {
         WebElement InputPrice = driver.findElement(By.xpath("//form/div[10]/input"));
         InputPrice.sendKeys("1000");
         FirstTest.pause(3);
+        WebElement InputAbout = driver.findElement(By.xpath("//*[@placeholder='About (max 500 chars)']"));
+        InputAbout.sendKeys("The car is in good condition. Low fuel consumption");
+        WebElement btnPhotosOfYouCar = driver.findElement(By.xpath("//label[@for='photos']"));
+        btnPhotosOfYouCar.click();
+        FirstTest.pause(3);
+        WebElement btnSubmit = driver.findElement(By.xpath("//button[@type='submit']"));
+        btnSubmit.click();
 
+        FirstTest.pause(3);
         driver.close();
 
     }
