@@ -21,12 +21,17 @@ public class PhoneBookSelectors {
         FirstTest.pause(5);
         WebElement btnAbout = driver.findElement(By.cssSelector("a[href='/about']"));
         btnAbout.click();
-        System.out.println("=======");
-        System.out.println(btnAbout.getText());
+        WebElement div = driver.findElement(By.cssSelector("div [class='about_main__2Uv5W']"));
+        String divText = div.getText();
+        System.out.println(divText);
+        WebElement h1 = driver.findElement(By.cssSelector("div[class='about_main__2Uv5W'] h1"));
+        System.out.println("h1--> " + h1.getText());
+
         FirstTest.pause(5);
         WebElement btnLogin = driver.findElement(By.cssSelector("a[href='/login']"));
         btnLogin.click();
         WebElement inputEmail = driver.findElement(By.cssSelector("input[placeholder='Email']"));
+        //WebElement InputEmail = driver.findElement(By.cssSelector("*[name='email']"));
         inputEmail.sendKeys("studiesaseev@gmail.com");
         FirstTest.pause(3);
         WebElement inputPassword = driver.findElement(By.cssSelector("input[placeholder='Password']"));
